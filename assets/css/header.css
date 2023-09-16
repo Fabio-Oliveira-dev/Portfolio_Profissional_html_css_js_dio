@@ -1,0 +1,82 @@
+.cabecalho{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cabecalho .foto{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.cabecalho .titulo{
+    font-family: 'Neue Machina', sans-serif;
+    text-align: center;
+}
+
+.informacoes{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.informacoes p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5rem;
+    font-size: 1.125rem;
+}
+
+.informacoes p::before{
+    content:'';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: .5rem;
+}
+
+.informacoes .cargo::before{
+    background-image: url('/assets/img/icons/cargo.svg');
+}
+
+.informacoes .mapa::before{
+    background-image: url('/assets/img/icons/mapa.svg');
+}
+
+.informacoes .telefone::before{
+    background-image: url('/assets/img/icons/telefone.svg');
+}
+
+.informacoes .email::before{
+    background-image: url('/assets/img/icons/email.svg');
+}
+
+@media only screen and (min-width: 768px) {
+    .cabecalho{
+        display: grid;
+        grid-template-areas:
+            "foto titulo"
+            "foto informacoes" 
+        ;
+    }
+
+    .cabecalho .foto{
+        grid-area: foto;
+        margin: 0;
+    }
+
+    .cabecalho .titulo{
+        grid-area: titulo;
+        text-align: start;
+        max-width: 210px;
+    }
+
+    .cabecalho .informacoes{
+        grid-area: informacoes;
+    }
+}
