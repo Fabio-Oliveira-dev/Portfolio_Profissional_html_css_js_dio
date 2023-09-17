@@ -34,13 +34,3 @@
     background-image: url('/assets/img/icons/githut.svg');
     margin-right: .5rem;
 }
-
-.portfolio li a{
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.portfolio li a:hover{
-    color: #000000;
-    text-decoration: underline;
-}
